@@ -35,7 +35,7 @@ class UsersViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
 
-        cell.textLabel?.text = "TESTE"
+        cell.textLabel?.text = "TESTE2"
         return cell
     }
     
