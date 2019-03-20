@@ -12,6 +12,9 @@ class UsersViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ParseAPIClient.sharedInstance().taskForGetUser { (res, error) in
+            print("FOI?")
+        }
 
     }
     
