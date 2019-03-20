@@ -9,83 +9,64 @@
 import UIKit
 
 class UsersViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ParseAPIClient.sharedInstance().taskForGetUser { (res, error) in
-            print("FOI?")
-        }
-
+        fetchJSON()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barStyle = .black
     }
+    
+    var usersData: Root?
+    var usuarios: [Users]?
+    //var users: Users?
+    
+    func fetchJSON() {
+        let urlString = "http://testmobiledev.eokoe.com/users"
+        var request = URLRequest(url: URL(string: urlString)!)
+        request.addValue("d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35", forHTTPHeaderField: "X-API-Key")
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Failed to get data from url:", error)
+                    return
+                }
+                guard let detailData = data else { return }
+                do {
+                    let decoder = JSONDecoder()
+                    //self.usuarios = try decoder.decode(Root.self, from: data)
+                    let jsonData = try decoder.decode(Root.self, from: detailData)
+                    //print(jsonData.results)
+                    self.usuarios = jsonData.results
+                    //print(self.usuarios as Any)
+                    self.tableView.reloadData()
+                } catch let jsonError {
+                    print("Failed to decode:", jsonError)
+                }
+            }
+            }.resume()
+    }
+    
+    
+    
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        return usuarios?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
-
-        cell.textLabel?.text = "TESTE2"
+        cell.textLabel?.text = "\(usuarios?[indexPath.row].name.first ?? "") \(usuarios?[indexPath.row].name.last ?? "")"
+        cell.detailTextLabel?.text = usuarios?[indexPath.row].bio.mini
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

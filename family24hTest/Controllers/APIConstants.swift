@@ -11,7 +11,7 @@ import Foundation
 extension ParseAPIClient {
     struct ParseConstants {
         static let startNumber: Int = 1
-        static let limitNumber: Int = 2
+        static let limitNumber: Int = 20
         static let parseUrl = "http://testmobiledev.eokoe.com/users"
         static let apiKey = "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
         static let getStart = "?start=\(startNumber)"
