@@ -10,47 +10,39 @@ import UIKit
 
 class UsersViewController: UITableViewController {
     
+    // MARK: - Global vars
+    
+    var usersData: Root?
+    var usuarios: [Users]?
+
+    
+    // MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchJSON()
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator.center = self.view.center
+        self.view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        ParseAPIClient.sharedInstance().getFetchJson(getHandler: { (usuarios, error) in
+            if error != nil {
+                self.mostrarAlerta("Verifique sua conexão com a internet em 'Configurações' e tente novamente.")
+                activityIndicator.removeFromSuperview()
+            } else {
+                self.usuarios = usuarios
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    activityIndicator.stopAnimating()
+                    activityIndicator.removeFromSuperview()
+                }
+            }
+        })
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
     }
     
-    var usersData: Root?
-    var usuarios: [Users]?
-    //var users: Users?
-    
-    func fetchJSON() {
-        let urlString = "http://testmobiledev.eokoe.com/users"
-        var request = URLRequest(url: URL(string: urlString)!)
-        request.addValue("d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35", forHTTPHeaderField: "X-API-Key")
-        URLSession.shared.dataTask(with: request) { (data, _, error) in
-            DispatchQueue.main.async {
-                if let error = error {
-                    print("Failed to get data from url:", error)
-                    return
-                }
-                guard let detailData = data else { return }
-                do {
-                    let decoder = JSONDecoder()
-                    //self.usuarios = try decoder.decode(Root.self, from: data)
-                    let jsonData = try decoder.decode(Root.self, from: detailData)
-                    //print(jsonData.results)
-                    self.usuarios = jsonData.results
-                    //print(self.usuarios as Any)
-                    self.tableView.reloadData()
-                } catch let jsonError {
-                    print("Failed to decode:", jsonError)
-                }
-            }
-            }.resume()
-    }
-    
-    
-    
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,10 +55,37 @@ class UsersViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
-        cell.textLabel?.text = "\(usuarios?[indexPath.row].name.first ?? "") \(usuarios?[indexPath.row].name.last ?? "")"
-        cell.detailTextLabel?.text = usuarios?[indexPath.row].bio.mini
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! TableViewCell
+        let name = "\(usuarios?[indexPath.row].name.first ?? "") \(usuarios?[indexPath.row].name.last ?? "")"
+        //cell.detailTextLabel?.text = usuarios?[indexPath.row].bio.mini
+        cell.setUserIcon(urlIconString: usuarios?[indexPath.row].picture.thumbnail ?? "", name: name, bio: usuarios?[indexPath.row].bio.mini ?? "")
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        print("TO AQUI")
+        if let userBio = usuarios?[indexPath.row].bio.mini {
+            print("Dentro da BIO")
+            let approxWidthOfBio = view.frame.width - 25.0 - 50.0 - 15.0
+            let size = CGSize(width: approxWidthOfBio, height: 1000.0)
+            let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]
+            let estimatedFrame = NSString(string: userBio).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            print("TAMANHO = \(estimatedFrame.height + 60.0)")
+            return estimatedFrame.height + 60.0
+        }
+        return 140.0
+    }
+    
+    //override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print("LINK = \(usuarios?[indexPath.row].picture.thumbnail ?? "DEU RUIM")")
+    //}
+    
+    // MARK: Alerta
+    
+    func mostrarAlerta(_ texto: String) {
+        let oAlerta = UIAlertController(title: "Alerta", message: texto, preferredStyle: .alert)
+        oAlerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(oAlerta, animated: true, completion: nil)
     }
 
 }

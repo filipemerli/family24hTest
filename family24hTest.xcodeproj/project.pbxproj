@@ -10,18 +10,25 @@
 		A7365B562241B06B005088A1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7365B552241B06B005088A1 /* APIConstants.swift */; };
 		A7365B582241B09A005088A1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7365B572241B09A005088A1 /* APIClient.swift */; };
 		A7365B5A2241D447005088A1 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7365B592241D447005088A1 /* Users.swift */; };
+		A7622D3C2243311D009E098E /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7622D3B2243311D009E098E /* Montserrat-Light.ttf */; };
+		A7622D3E2243312D009E098E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7622D3D2243312D009E098E /* Montserrat-Regular.ttf */; };
+		A7622D402243313E009E098E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7622D3F2243313E009E098E /* Montserrat-Medium.ttf */; };
 		A7BEBCAA224084EB00A3BCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEBCA9224084EB00A3BCC6 /* AppDelegate.swift */; };
 		A7BEBCAC224084EB00A3BCC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEBCAB224084EB00A3BCC6 /* ViewController.swift */; };
 		A7BEBCAF224084EB00A3BCC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BEBCAD224084EB00A3BCC6 /* Main.storyboard */; };
 		A7BEBCB1224084EE00A3BCC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BEBCB0224084EE00A3BCC6 /* Assets.xcassets */; };
 		A7BEBCB4224084EE00A3BCC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BEBCB2224084EE00A3BCC6 /* LaunchScreen.storyboard */; };
 		A7BEBCBC2240885600A3BCC6 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEBCBB2240885600A3BCC6 /* UsersViewController.swift */; };
+		A7E0EA432242F4F60080BA55 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E0EA422242F4F60080BA55 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A7365B552241B06B005088A1 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		A7365B572241B09A005088A1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A7365B592241D447005088A1 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		A7622D3B2243311D009E098E /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		A7622D3D2243312D009E098E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		A7622D3F2243313E009E098E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		A7BEBCA6224084EB00A3BCC6 /* family24hTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = family24hTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BEBCA9224084EB00A3BCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7BEBCAB224084EB00A3BCC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +37,7 @@
 		A7BEBCB3224084EE00A3BCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7BEBCB5224084EE00A3BCC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7BEBCBB2240885600A3BCC6 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		A7E0EA422242F4F60080BA55 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,7 @@
 			children = (
 				A7BEBCBB2240885600A3BCC6 /* UsersViewController.swift */,
 				A7BEBCAB224084EB00A3BCC6 /* ViewController.swift */,
+				A7E0EA422242F4F60080BA55 /* TableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -59,6 +68,16 @@
 				A7365B572241B09A005088A1 /* APIClient.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A7622D3A224330E8009E098E /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A7622D3F2243313E009E098E /* Montserrat-Medium.ttf */,
+				A7622D3D2243312D009E098E /* Montserrat-Regular.ttf */,
+				A7622D3B2243311D009E098E /* Montserrat-Light.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		A7BEBC9D224084EB00A3BCC6 = {
@@ -81,15 +100,24 @@
 			isa = PBXGroup;
 			children = (
 				A7BEBCA9224084EB00A3BCC6 /* AppDelegate.swift */,
+				A7E0EA412242EA000080BA55 /* Model */,
 				A7365B542241B012005088A1 /* Controllers */,
 				A7365B532241AFDE005088A1 /* Views */,
 				A7BEBCAD224084EB00A3BCC6 /* Main.storyboard */,
+				A7622D3A224330E8009E098E /* fonts */,
 				A7BEBCB0224084EE00A3BCC6 /* Assets.xcassets */,
 				A7BEBCB2224084EE00A3BCC6 /* LaunchScreen.storyboard */,
 				A7BEBCB5224084EE00A3BCC6 /* Info.plist */,
-				A7365B592241D447005088A1 /* Users.swift */,
 			);
 			path = family24hTest;
+			sourceTree = "<group>";
+		};
+		A7E0EA412242EA000080BA55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7365B592241D447005088A1 /* Users.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +178,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7622D3C2243311D009E098E /* Montserrat-Light.ttf in Resources */,
 				A7BEBCB4224084EE00A3BCC6 /* LaunchScreen.storyboard in Resources */,
 				A7BEBCB1224084EE00A3BCC6 /* Assets.xcassets in Resources */,
+				A7622D3E2243312D009E098E /* Montserrat-Regular.ttf in Resources */,
+				A7622D402243313E009E098E /* Montserrat-Medium.ttf in Resources */,
 				A7BEBCAF224084EB00A3BCC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +199,7 @@
 				A7BEBCBC2240885600A3BCC6 /* UsersViewController.swift in Sources */,
 				A7365B582241B09A005088A1 /* APIClient.swift in Sources */,
 				A7365B5A2241D447005088A1 /* Users.swift in Sources */,
+				A7E0EA432242F4F60080BA55 /* TableViewCell.swift in Sources */,
 				A7BEBCAA224084EB00A3BCC6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ParseAPIClient: NSObject {
     
@@ -22,9 +23,61 @@ class ParseAPIClient: NSObject {
     
     // MARK: GET
     
-    //func taskForGetUsers(handlerGetUsers)
+    func getFetchJson(getHandler: @escaping (_ result: [Users]?, _ error: Error?) -> Void) {
+        let urlString = "\(ParseConstants.parseUrl)" + "\(ParseConstants.getStart)" + "\(ParseConstants.getLimit)"
+        var request = URLRequest(url: URL(string: urlString)!)
+        request.addValue(ParseConstants.apiKey, forHTTPHeaderField: ParseConstants.headerAPIKey)
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            if let error = error {
+                getHandler(nil, error)
+                print("Falha no GET:", error)
+                return
+            }
+            guard let detailData = data else {
+                getHandler(nil, error)
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(Root.self, from: detailData)
+                getHandler(jsonData.results, nil)
+            } catch let jsonError {
+                getHandler(nil, error)
+                print("Falha no Decode:", jsonError)
+            }
+        }.resume()
+    }
     
+    func loadImages(url: String, loadHandler: @escaping (_ result: UIImage?, _ error: Error?) -> Void) {
+        let imageURL = URL(string: url)!
+        URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
+            if error == nil {
+                let downloadedImage = UIImage(data: data!)
+                loadHandler(downloadedImage, nil)
+            } else {
+                loadHandler(nil, error)
+            }
+        }.resume()
+    }
    
+    /*
+    
+    let imageURL = URL(string: Constants.CatURL)!
+    let task = URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
+        if error == nil {
+            let downloadedImage = UIImage(data: data!)
+            
+            performUIUpdatesOnMain {
+                self.imageView.image = downloadedImage
+            }
+        } else {
+            print(error!)
+        }
+    }.resume()
+    
+    */
+    
+    
     
     // MARK: Shared Instance
     

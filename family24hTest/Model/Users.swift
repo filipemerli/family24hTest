@@ -14,8 +14,15 @@ struct Root: Decodable {
 
 struct Users: Decodable {
     let id: Int
+    let picture: Sizes
     let name: Names
     let bio: Mini
+}
+
+struct Sizes: Decodable {
+    let large: String
+    let medium: String
+    let thumbnail: String
 }
 
 struct Mini: Decodable {
