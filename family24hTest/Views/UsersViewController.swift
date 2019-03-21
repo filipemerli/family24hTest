@@ -78,9 +78,11 @@ class UsersViewController: UITableViewController {
         return 140.0
     }
     
-    //override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print("LINK = \(usuarios?[indexPath.row].picture.thumbnail ?? "DEU RUIM")")
-    //}
+        let next = storyboard?.instantiateViewController(withIdentifier: "DetailVC")
+        present(next!, animated: true, completion: nil)
+    }
     
     // MARK: Alerta
     

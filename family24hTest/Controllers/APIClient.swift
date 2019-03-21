@@ -59,25 +59,6 @@ class ParseAPIClient: NSObject {
             }
         }.resume()
     }
-   
-    /*
-    
-    let imageURL = URL(string: Constants.CatURL)!
-    let task = URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
-        if error == nil {
-            let downloadedImage = UIImage(data: data!)
-            
-            performUIUpdatesOnMain {
-                self.imageView.image = downloadedImage
-            }
-        } else {
-            print(error!)
-        }
-    }.resume()
-    
-    */
-    
-    
     
     // MARK: Shared Instance
     
@@ -87,9 +68,6 @@ class ParseAPIClient: NSObject {
         }
         return Singleton.sharedInstance
     }
-    
-    // PASSAR PARA CONVINIENCE
-    
     
     
 }

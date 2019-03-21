@@ -13,8 +13,8 @@
 		A7622D3C2243311D009E098E /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7622D3B2243311D009E098E /* Montserrat-Light.ttf */; };
 		A7622D3E2243312D009E098E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7622D3D2243312D009E098E /* Montserrat-Regular.ttf */; };
 		A7622D402243313E009E098E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7622D3F2243313E009E098E /* Montserrat-Medium.ttf */; };
+		A76DDC68224433F90033D2BA /* DetatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76DDC67224433F90033D2BA /* DetatilViewController.swift */; };
 		A7BEBCAA224084EB00A3BCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEBCA9224084EB00A3BCC6 /* AppDelegate.swift */; };
-		A7BEBCAC224084EB00A3BCC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEBCAB224084EB00A3BCC6 /* ViewController.swift */; };
 		A7BEBCAF224084EB00A3BCC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BEBCAD224084EB00A3BCC6 /* Main.storyboard */; };
 		A7BEBCB1224084EE00A3BCC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BEBCB0224084EE00A3BCC6 /* Assets.xcassets */; };
 		A7BEBCB4224084EE00A3BCC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BEBCB2224084EE00A3BCC6 /* LaunchScreen.storyboard */; };
@@ -29,9 +29,9 @@
 		A7622D3B2243311D009E098E /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		A7622D3D2243312D009E098E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		A7622D3F2243313E009E098E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		A76DDC67224433F90033D2BA /* DetatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetatilViewController.swift; sourceTree = "<group>"; };
 		A7BEBCA6224084EB00A3BCC6 /* family24hTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = family24hTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BEBCA9224084EB00A3BCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7BEBCAB224084EB00A3BCC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A7BEBCAE224084EB00A3BCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7BEBCB0224084EE00A3BCC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7BEBCB3224084EE00A3BCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,8 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				A7BEBCBB2240885600A3BCC6 /* UsersViewController.swift */,
-				A7BEBCAB224084EB00A3BCC6 /* ViewController.swift */,
 				A7E0EA422242F4F60080BA55 /* TableViewCell.swift */,
+				A76DDC67224433F90033D2BA /* DetatilViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,11 +195,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7365B562241B06B005088A1 /* APIConstants.swift in Sources */,
-				A7BEBCAC224084EB00A3BCC6 /* ViewController.swift in Sources */,
 				A7BEBCBC2240885600A3BCC6 /* UsersViewController.swift in Sources */,
 				A7365B582241B09A005088A1 /* APIClient.swift in Sources */,
 				A7365B5A2241D447005088A1 /* Users.swift in Sources */,
 				A7E0EA432242F4F60080BA55 /* TableViewCell.swift in Sources */,
+				A76DDC68224433F90033D2BA /* DetatilViewController.swift in Sources */,
 				A7BEBCAA224084EB00A3BCC6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

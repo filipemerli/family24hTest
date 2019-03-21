@@ -82,7 +82,88 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0P-bH-jpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123.18840579710145" y="304.07608695652175"/>
+            <point key="canvasLocation" x="-283" y="305"/>
+        </scene>
+        <!--Detatil View Controller-->
+        <scene sceneID="gKA-C9-iTR">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="NOQ-qC-6ef" customClass="DetatilViewController" customModule="family24hTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9fj-1g-nIe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="971"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEK-dc-TPx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="971"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balao" translatesAutoresizingMaskIntoConstraints="NO" id="c7t-Of-m5C">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-5V-YTX">
+                                        <rect key="frame" x="8" y="40" width="14" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="14" id="LCh-R3-WqX"/>
+                                            <constraint firstAttribute="height" constant="22" id="Ta4-vd-EK9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <state key="normal" image="Arrow"/>
+                                        <connections>
+                                            <action selector="backButtonPress:" destination="NOQ-qC-6ef" eventType="touchUpInside" id="snC-bg-Yz4"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zKo-lH-BJB">
+                                        <rect key="frame" x="43" y="198" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="XoI-lK-n5B"/>
+                                            <constraint firstAttribute="height" constant="80" id="pDg-Fo-flk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T05-q8-0Jm">
+                                        <rect key="frame" x="43" y="914" width="327" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="19T-Oa-rDh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="c7t-Of-m5C" secondAttribute="trailing" id="0gS-az-a8W"/>
+                                    <constraint firstItem="c7t-Of-m5C" firstAttribute="top" secondItem="DEK-dc-TPx" secondAttribute="top" id="3hq-EE-qMC"/>
+                                    <constraint firstItem="zKo-lH-BJB" firstAttribute="leading" secondItem="DEK-dc-TPx" secondAttribute="leading" constant="43" id="4ku-He-gqv"/>
+                                    <constraint firstItem="c7t-Of-m5C" firstAttribute="centerY" secondItem="DEK-dc-TPx" secondAttribute="centerY" constant="-363.5" id="6Sh-pY-SwP"/>
+                                    <constraint firstItem="T05-q8-0Jm" firstAttribute="leading" secondItem="zKo-lH-BJB" secondAttribute="leading" id="FK1-sO-UoM"/>
+                                    <constraint firstItem="T05-q8-0Jm" firstAttribute="bottom" secondItem="DEK-dc-TPx" secondAttribute="bottomMargin" id="VnO-1E-9J6"/>
+                                    <constraint firstItem="T05-q8-0Jm" firstAttribute="centerX" secondItem="c7t-Of-m5C" secondAttribute="centerX" id="htz-1t-5yZ"/>
+                                    <constraint firstItem="jQ5-5V-YTX" firstAttribute="top" secondItem="DEK-dc-TPx" secondAttribute="top" constant="40" id="qYz-XR-B9T"/>
+                                    <constraint firstItem="c7t-Of-m5C" firstAttribute="centerX" secondItem="DEK-dc-TPx" secondAttribute="centerX" id="thV-5U-okt"/>
+                                    <constraint firstItem="jQ5-5V-YTX" firstAttribute="leading" secondItem="DEK-dc-TPx" secondAttribute="leading" constant="8" id="tib-Y4-ARh"/>
+                                    <constraint firstAttribute="bottom" secondItem="c7t-Of-m5C" secondAttribute="bottom" constant="727" id="v5S-Rj-JuF"/>
+                                    <constraint firstItem="c7t-Of-m5C" firstAttribute="leading" secondItem="DEK-dc-TPx" secondAttribute="leading" id="ve8-jb-miL"/>
+                                    <constraint firstItem="zKo-lH-BJB" firstAttribute="top" secondItem="c7t-Of-m5C" secondAttribute="bottom" constant="-46" id="vkG-l5-Y5p"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DEK-dc-TPx" firstAttribute="bottom" secondItem="Jle-9N-EjD" secondAttribute="bottom" priority="250" id="7hY-e8-17k"/>
+                            <constraint firstItem="DEK-dc-TPx" firstAttribute="leading" secondItem="Jle-9N-EjD" secondAttribute="leading" id="9wY-cm-qp6"/>
+                            <constraint firstItem="DEK-dc-TPx" firstAttribute="bottom" secondItem="Jle-9N-EjD" secondAttribute="bottom" id="GzT-5j-rni"/>
+                            <constraint firstItem="DEK-dc-TPx" firstAttribute="top" secondItem="9fj-1g-nIe" secondAttribute="top" id="aIJ-tl-Gus"/>
+                            <constraint firstItem="DEK-dc-TPx" firstAttribute="trailing" secondItem="Jle-9N-EjD" secondAttribute="trailing" id="e4C-MG-UTi"/>
+                            <constraint firstItem="DEK-dc-TPx" firstAttribute="top" secondItem="Jle-9N-EjD" secondAttribute="top" priority="250" constant="-20" id="mlK-ss-aRO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jle-9N-EjD"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="971"/>
+                    <connections>
+                        <outlet property="sendMessageButton" destination="T05-q8-0Jm" id="Dgd-xG-WF9"/>
+                        <outlet property="userIconView" destination="zKo-lH-BJB" id="xsG-ON-bXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXh-6H-foh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486.95652173913049" y="400.679347826087"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dAu-Qd-iWc">
@@ -104,20 +185,9 @@
             </objects>
             <point key="canvasLocation" x="-1073" y="305"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="family24hTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="633" y="304"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="Arrow" width="25" height="42"/>
+        <image name="balao" width="749" height="436"/>
+    </resources>
 </document>
