@@ -20,6 +20,8 @@ class UsersViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableView.automaticDimension
         let activityIndicator = UIActivityIndicatorView(style: .gray)
         activityIndicator.center = self.view.center
         self.view.addSubview(activityIndicator)

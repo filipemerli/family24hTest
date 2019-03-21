@@ -31,8 +31,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sl-8c-Q86">
-                                            <rect key="frame" x="113" y="11" width="281" height="31"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sl-8c-Q86">
+                                            <rect key="frame" x="106" y="24" width="288" height="31"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -44,10 +44,10 @@
                                                 <constraint firstAttribute="height" constant="50" id="G3N-ao-3zL"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="TopLeft" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeC-bz-315">
-                                            <rect key="frame" x="113" y="49" width="281" height="49"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeC-bz-315">
+                                            <rect key="frame" x="106" y="63" width="288" height="66"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="49" id="QXI-Gf-JAp"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="vDa-kU-BpS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -55,15 +55,15 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="EeC-bz-315" secondAttribute="bottom" constant="31" id="0Cn-PX-H99"/>
                                         <constraint firstItem="Nch-Au-7Ew" firstAttribute="leading" secondItem="CgW-n1-3qc" secondAttribute="leadingMargin" constant="11" id="6nH-Zs-Lp7"/>
-                                        <constraint firstItem="EeC-bz-315" firstAttribute="top" secondItem="9Sl-8c-Q86" secondAttribute="bottom" constant="7" id="KIM-Up-uIU"/>
+                                        <constraint firstItem="9Sl-8c-Q86" firstAttribute="top" secondItem="CgW-n1-3qc" secondAttribute="top" constant="24" id="75u-3r-QiX"/>
+                                        <constraint firstItem="EeC-bz-315" firstAttribute="top" secondItem="9Sl-8c-Q86" secondAttribute="bottom" constant="8" symbolic="YES" id="EVP-ne-z5a"/>
+                                        <constraint firstItem="9Sl-8c-Q86" firstAttribute="leading" secondItem="Nch-Au-7Ew" secondAttribute="trailing" constant="25" id="GSO-0k-0j2"/>
                                         <constraint firstItem="Nch-Au-7Ew" firstAttribute="top" secondItem="CgW-n1-3qc" secondAttribute="topMargin" constant="24" id="OkG-32-DeG"/>
-                                        <constraint firstItem="EeC-bz-315" firstAttribute="trailing" secondItem="9Sl-8c-Q86" secondAttribute="trailing" id="RDP-9O-HZI"/>
-                                        <constraint firstItem="9Sl-8c-Q86" firstAttribute="trailing" secondItem="CgW-n1-3qc" secondAttribute="trailingMargin" id="RIG-te-FMx"/>
-                                        <constraint firstItem="9Sl-8c-Q86" firstAttribute="leading" secondItem="Nch-Au-7Ew" secondAttribute="trailing" constant="32" id="VAp-1C-u2v"/>
-                                        <constraint firstItem="9Sl-8c-Q86" firstAttribute="top" secondItem="CgW-n1-3qc" secondAttribute="topMargin" id="bkl-ia-Wxq"/>
-                                        <constraint firstItem="EeC-bz-315" firstAttribute="leading" secondItem="9Sl-8c-Q86" secondAttribute="leading" id="sdK-uy-Gqg"/>
+                                        <constraint firstAttribute="trailing" secondItem="9Sl-8c-Q86" secondAttribute="trailing" constant="20" id="SgA-kK-gKo"/>
+                                        <constraint firstItem="EeC-bz-315" firstAttribute="trailing" secondItem="9Sl-8c-Q86" secondAttribute="trailing" id="bNU-Zn-JY3"/>
+                                        <constraint firstItem="EeC-bz-315" firstAttribute="leading" secondItem="9Sl-8c-Q86" secondAttribute="leading" id="k1x-RJ-vik"/>
+                                        <constraint firstAttribute="bottom" secondItem="EeC-bz-315" secondAttribute="bottom" constant="11" id="vXH-li-ujU"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
