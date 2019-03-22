@@ -26,13 +26,11 @@ class TableViewCell: UITableViewCell {
                     self.userIconS.layer.masksToBounds = false
                     self.userIconS.layer.cornerRadius = self.userIconS.frame.height/2
                     self.userIconS.clipsToBounds = true
-                    
                 }
-                //self.userIconS.image = image
+                
             } else {
-                //ALERTA
+                //tratar erro
             }
         }
     }
-
 }

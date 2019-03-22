@@ -12,9 +12,7 @@ class UsersViewController: UITableViewController {
     
     // MARK: - Global vars
     
-    var usersData: Root?
     var usuarios: [Users]?
-
     
     // MARK: - ViewDidLoad
     
@@ -22,20 +20,16 @@ class UsersViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableView.automaticDimension
-        let activityIndicator = UIActivityIndicatorView(style: .gray)
-        activityIndicator.center = self.view.center
-        self.view.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
+        let spinner = UITableViewController.displaySpinner(onView: self.view)
         ParseAPIClient.sharedInstance().getFetchJson(getHandler: { (usuarios, error) in
             if error != nil {
                 self.mostrarAlerta("Verifique sua conexão com a internet em 'Configurações' e tente novamente.")
-                activityIndicator.removeFromSuperview()
+                UITableViewController.removeSpinner(spinner: spinner)
             } else {
                 self.usuarios = usuarios
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    activityIndicator.stopAnimating()
-                    activityIndicator.removeFromSuperview()
+                    UITableViewController.removeSpinner(spinner: spinner)
                 }
             }
         })
@@ -58,30 +52,26 @@ class UsersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! TableViewCell
-        let name = "\(usuarios?[indexPath.row].name.first ?? "") \(usuarios?[indexPath.row].name.last ?? "")"
-        //cell.detailTextLabel?.text = usuarios?[indexPath.row].bio.mini
-        cell.setUserIcon(urlIconString: usuarios?[indexPath.row].picture.thumbnail ?? "", name: name, bio: usuarios?[indexPath.row].bio.mini ?? "")
+        let name = "\(usuarios?[indexPath.row].name!.first ?? "") \(usuarios?[indexPath.row].name!.last ?? "")"
+        cell.setUserIcon(urlIconString: usuarios?[indexPath.row].picture!.thumbnail ?? "", name: name, bio: usuarios?[indexPath.row].bio!.mini ?? "")
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        print("TO AQUI")
-        if let userBio = usuarios?[indexPath.row].bio.mini {
-            print("Dentro da BIO")
+        if let userBio = usuarios?[indexPath.row].bio!.mini {
             let approxWidthOfBio = view.frame.width - 25.0 - 50.0 - 15.0
             let size = CGSize(width: approxWidthOfBio, height: 1000.0)
             let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]
             let estimatedFrame = NSString(string: userBio).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
-            print("TAMANHO = \(estimatedFrame.height + 60.0)")
             return estimatedFrame.height + 60.0
         }
         return 140.0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print("LINK = \(usuarios?[indexPath.row].picture.thumbnail ?? "DEU RUIM")")
-        let next = storyboard?.instantiateViewController(withIdentifier: "DetailVC")
-        present(next!, animated: true, completion: nil)
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetatilViewController
+        detailVC.userId = usuarios?[indexPath.row].id ?? 0
+        present(detailVC, animated: true, completion: nil)
     }
     
     // MARK: Alerta

@@ -13,6 +13,8 @@ extension ParseAPIClient {
         static let startNumber: Int = 1
         static let limitNumber: Int = 20
         static let parseUrl = "http://testmobiledev.eokoe.com/users"
+        static let parseUrlId = "http://testmobiledev.eokoe.com/user/"
+        static let parseUrlPost = "http://testmobiledev.eokoe.com/upload"
         static let apiKey = "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
         static let getStart = "?start=\(startNumber)"
         static let getLimit = "?limit=\(limitNumber)"
