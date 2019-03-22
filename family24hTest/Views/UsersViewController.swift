@@ -20,6 +20,7 @@ class UsersViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.accessibilityIdentifier = "usersTableView"
         let spinner = UITableViewController.displaySpinner(onView: self.view)
         ParseAPIClient.sharedInstance().getFetchJson(getHandler: { (usuarios, error) in
             if error != nil {
@@ -52,6 +53,7 @@ class UsersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! TableViewCell
+        cell.accessibilityIdentifier = "userCell_\(indexPath.row)"
         let name = "\(usuarios?[indexPath.row].name!.first ?? "") \(usuarios?[indexPath.row].name!.last ?? "")"
         cell.setUserIcon(urlIconString: usuarios?[indexPath.row].picture!.thumbnail ?? "", name: name, bio: usuarios?[indexPath.row].bio!.mini ?? "")
         return cell

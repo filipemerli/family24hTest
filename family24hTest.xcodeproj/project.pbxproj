@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A726738E224553CE0073C0E0 /* family24hTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726738D224553CE0073C0E0 /* family24hTestTests.swift */; };
+		A726739C224558BF0073C0E0 /* family24hTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726739B224558BF0073C0E0 /* family24hTestUITests.swift */; };
 		A7365B562241B06B005088A1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7365B552241B06B005088A1 /* APIConstants.swift */; };
 		A7365B582241B09A005088A1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7365B572241B09A005088A1 /* APIClient.swift */; };
 		A7365B5A2241D447005088A1 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7365B592241D447005088A1 /* Users.swift */; };
@@ -23,7 +25,30 @@
 		A7E0EA432242F4F60080BA55 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E0EA422242F4F60080BA55 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A7267390224553CE0073C0E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BEBC9E224084EB00A3BCC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7BEBCA5224084EB00A3BCC6;
+			remoteInfo = family24hTest;
+		};
+		A726739E224558BF0073C0E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BEBC9E224084EB00A3BCC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7BEBCA5224084EB00A3BCC6;
+			remoteInfo = family24hTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A726738B224553CD0073C0E0 /* family24hTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = family24hTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A726738D224553CE0073C0E0 /* family24hTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = family24hTestTests.swift; sourceTree = "<group>"; };
+		A726738F224553CE0073C0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7267399224558BF0073C0E0 /* family24hTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = family24hTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A726739B224558BF0073C0E0 /* family24hTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = family24hTestUITests.swift; sourceTree = "<group>"; };
+		A726739D224558BF0073C0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7365B552241B06B005088A1 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		A7365B572241B09A005088A1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A7365B592241D447005088A1 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -43,6 +68,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A7267388224553CD0073C0E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7267396224558BF0073C0E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7BEBCA3224084EB00A3BCC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,6 +92,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A726738C224553CE0073C0E0 /* family24hTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				A726738D224553CE0073C0E0 /* family24hTestTests.swift */,
+				A726738F224553CE0073C0E0 /* Info.plist */,
+			);
+			path = family24hTestTests;
+			sourceTree = "<group>";
+		};
+		A726739A224558BF0073C0E0 /* family24hTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A726739B224558BF0073C0E0 /* family24hTestUITests.swift */,
+				A726739D224558BF0073C0E0 /* Info.plist */,
+			);
+			path = family24hTestUITests;
+			sourceTree = "<group>";
+		};
 		A7365B532241AFDE005088A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				A7BEBCA8224084EB00A3BCC6 /* family24hTest */,
+				A726738C224553CE0073C0E0 /* family24hTestTests */,
+				A726739A224558BF0073C0E0 /* family24hTestUITests */,
 				A7BEBCA7224084EB00A3BCC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				A7BEBCA6224084EB00A3BCC6 /* family24hTest.app */,
+				A726738B224553CD0073C0E0 /* family24hTestTests.xctest */,
+				A7267399224558BF0073C0E0 /* family24hTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +195,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A726738A224553CD0073C0E0 /* family24hTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7267392224553CE0073C0E0 /* Build configuration list for PBXNativeTarget "family24hTestTests" */;
+			buildPhases = (
+				A7267387224553CD0073C0E0 /* Sources */,
+				A7267388224553CD0073C0E0 /* Frameworks */,
+				A7267389224553CD0073C0E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7267391224553CE0073C0E0 /* PBXTargetDependency */,
+			);
+			name = family24hTestTests;
+			productName = family24hTestTests;
+			productReference = A726738B224553CD0073C0E0 /* family24hTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7267398224558BF0073C0E0 /* family24hTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A72673A0224558BF0073C0E0 /* Build configuration list for PBXNativeTarget "family24hTestUITests" */;
+			buildPhases = (
+				A7267395224558BF0073C0E0 /* Sources */,
+				A7267396224558BF0073C0E0 /* Frameworks */,
+				A7267397224558BF0073C0E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A726739F224558BF0073C0E0 /* PBXTargetDependency */,
+			);
+			name = family24hTestUITests;
+			productName = family24hTestUITests;
+			productReference = A7267399224558BF0073C0E0 /* family24hTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A7BEBCA5224084EB00A3BCC6 /* family24hTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7BEBCB8224084EE00A3BCC6 /* Build configuration list for PBXNativeTarget "family24hTest" */;
@@ -161,6 +258,14 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Filipe Merli";
 				TargetAttributes = {
+					A726738A224553CD0073C0E0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A7BEBCA5224084EB00A3BCC6;
+					};
+					A7267398224558BF0073C0E0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A7BEBCA5224084EB00A3BCC6;
+					};
 					A7BEBCA5224084EB00A3BCC6 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -180,11 +285,27 @@
 			projectRoot = "";
 			targets = (
 				A7BEBCA5224084EB00A3BCC6 /* family24hTest */,
+				A726738A224553CD0073C0E0 /* family24hTestTests */,
+				A7267398224558BF0073C0E0 /* family24hTestUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A7267389224553CD0073C0E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7267397224558BF0073C0E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7BEBCA4224084EB00A3BCC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +322,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A7267387224553CD0073C0E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A726738E224553CE0073C0E0 /* family24hTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7267395224558BF0073C0E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A726739C224558BF0073C0E0 /* family24hTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7BEBCA2224084EB00A3BCC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +354,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7267391224553CE0073C0E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7BEBCA5224084EB00A3BCC6 /* family24hTest */;
+			targetProxy = A7267390224553CE0073C0E0 /* PBXContainerItemProxy */;
+		};
+		A726739F224558BF0073C0E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7BEBCA5224084EB00A3BCC6 /* family24hTest */;
+			targetProxy = A726739E224558BF0073C0E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A7BEBCAD224084EB00A3BCC6 /* Main.storyboard */ = {
@@ -238,6 +388,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A7267393224553CE0073C0E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2Z8KTGT88;
+				INFOPLIST_FILE = family24hTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.filipemerli.family24hTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/family24hTest.app/family24hTest";
+			};
+			name = Debug;
+		};
+		A7267394224553CE0073C0E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2Z8KTGT88;
+				INFOPLIST_FILE = family24hTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.filipemerli.family24hTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/family24hTest.app/family24hTest";
+			};
+			name = Release;
+		};
+		A72673A1224558BF0073C0E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2Z8KTGT88;
+				INFOPLIST_FILE = family24hTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.filipemerli.family24hTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = family24hTest;
+			};
+			name = Debug;
+		};
+		A72673A2224558BF0073C0E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2Z8KTGT88;
+				INFOPLIST_FILE = family24hTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.filipemerli.family24hTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = family24hTest;
+			};
+			name = Release;
+		};
 		A7BEBCB6224084EE00A3BCC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,6 +623,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A7267392224553CE0073C0E0 /* Build configuration list for PBXNativeTarget "family24hTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7267393224553CE0073C0E0 /* Debug */,
+				A7267394224553CE0073C0E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A72673A0224558BF0073C0E0 /* Build configuration list for PBXNativeTarget "family24hTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A72673A1224558BF0073C0E0 /* Debug */,
+				A72673A2224558BF0073C0E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A7BEBCA1224084EB00A3BCC6 /* Build configuration list for PBXProject "family24hTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
